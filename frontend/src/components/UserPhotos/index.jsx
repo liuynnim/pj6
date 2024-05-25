@@ -13,13 +13,12 @@ import {
   List,
   ListItem, 
 } from "@mui/material";
-import { useParams, Link, Outlet } from "react-router-dom";
-
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-function UserPhotos({currentUser}) {
+function UserPhotos() {
   const { userId } = useParams();
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState([]); 
 
   useEffect(() => {
     const fetchPhotos = async () => {
@@ -73,7 +72,6 @@ function UserPhotos({currentUser}) {
                         ))}
                       </List>
                     </Paper>
-                    <Outlet />
                     <Button
                       variant="contained"
                       color="primary"

@@ -36,13 +36,12 @@ function AppLayout() {
                   />
                   <Route
                       path="/photos/:userId"
-                      element = {<UserPhotos currentUser={user} />}
-                  >
-                    <Route
-                        path="/photos/:userId/commentsOfPhoto/:photoId"
-                        element = {<AddComment />}
-                    />
-                  </Route>
+                      element = {<UserPhotos/>}
+                  />
+                  <Route
+                      path="/photos/:userId/commentsOfPhoto/:photoId"
+                      element = {<AddComment />}
+                  />
                   <Route
                       path="/photos/:userId/new"
                       element = {<AddPhoto />}

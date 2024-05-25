@@ -58,7 +58,6 @@ const upload = multer({ storage: storage });
 
 router.post("/:id/new",upload.single("photo"), async(req, res) => {
   try {
-    console.log(req.params);
     const newPhoto = new Photo({
         file_name:  req.file.filename,
         user_id: req.params.id,

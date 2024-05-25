@@ -3,7 +3,7 @@ import {Navigate} from "react-router-dom";
 function ProtectedRoute({user, children}) {
     if(!user) {
         return (
-        <Navigate to="/login" replace/>
+        <Navigate to="/admin/login" replace/>
         );
     }
     return children;
